@@ -49,6 +49,6 @@ Note: These features are normalized and thus do not have any units, per the comm
 ```{r getvars}
 samsung_aggregated_output <- read.table("./samsung_aggregated_output.txt",header=TRUE, sep="|",
            stringsAsFactors=FALSE)
-str(samsung_aggregated_output)
+print(str(samsung_aggregated_output))
 ```
 

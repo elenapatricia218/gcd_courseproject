@@ -18,16 +18,16 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 
 ## How has the data been manipulated
 
-1) Imported the features.txt document in order to get column names
-2) Converted column names to *all lowercase* in order to enable identification of all variables which track mean and standard deviation
-3) Imported the activity_labels.txt document in order to get activity descriptions
+1) Imported the features.txt document in order to get column names  
+2) Converted column names to *all lowercase* in order to enable identification of all variables which track mean and standard deviation  
+3) Imported the activity_labels.txt document in order to get activity descriptions  
 4) Dealt with each of the training and test datasets separately at first  
 -- *Training:* attach the activity number (ytrain), label (activity_labels) and subject identifier (subjecttrain) to the core training dataset (Xtrain)  
--- *Test:* attach the activity number (ytest), label (activity_labels) and subject idntifier (subjecttest) to the core test dataset (Xtest)
-5) Concatenate (rbind) the training and test datasets to create one master dataset
+-- *Test:* attach the activity number (ytest), label (activity_labels) and subject idntifier (subjecttest) to the core test dataset (Xtest)  
+5) Concatenate (rbind) the training and test datasets to create one master dataset  
 6) Subset columns from the master dataset which we'll need to create the final, summarized dataset.  
--- *These include: subject, activity, and all columns with "mean" or "std" in the variable name.*
-7) Summarize the data using the aggregate function by activity by subject, taking the mean of all mean & std variables on the subset
+-- *These include: subject, activity, and all columns with "mean" or "std" in the variable name.*  
+7) Summarize the data using the aggregate function by activity by subject, taking the mean of all mean & std variables on the subset  
 8) Write a table in *.txt outputformat (pipe-delimited)
 
 Please see the run_analysis.R file in this repository for exact code and transformations.
